@@ -2,6 +2,8 @@ package com.api.customer.service;
 
 import com.api.customer.entity.Customer;
 import com.api.customer.repository.CustomerRepository;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,7 +24,7 @@ public class CustomerService {
         return customerRepository.save(customer);
     }
 
-    //Fetch Customer Details
+    //Fetch Customer Details based on ID
     @Transactional(readOnly = true)
     public Customer getCustomer(UUID id){
         if (customerRepository.existsById(id)) {
@@ -31,6 +33,12 @@ public class CustomerService {
         else {
             throw new RuntimeException("Customer not found with id " + id);
         }
+    }
+
+    //Get all the customer details
+    @Transactional(readOnly = true)
+    public Page<Customer> getAllCustomers(Pageable pageable) {
+        return customerRepository.findAll(pageable);
     }
 
     //Update Customer Details

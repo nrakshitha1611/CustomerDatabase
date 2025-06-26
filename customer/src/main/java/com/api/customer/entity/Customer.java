@@ -45,6 +45,10 @@ public class Customer {
         updatedAt = LocalDateTime.now();
     }
 
+    //Default Constructor
+    public Customer() {
+    }
+
     public Customer(String firstName, String lastName, String emailAddress) {
         this.firstName = firstName;
         this.lastName = lastName;
