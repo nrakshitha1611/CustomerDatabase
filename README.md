@@ -166,6 +166,8 @@ Status: 200
 ---
 ## Contact
 Maintained by [Rakshitha Nagaraj](https://github.com/nrakshitha1611?tab=repositories)
+---
+**Note: The project was timeboxed and completed in approx 2-3hrs**
 
 
 
