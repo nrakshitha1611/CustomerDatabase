@@ -106,7 +106,7 @@ java -jar target/customer-0.0.1-SNAPSHOT.jar
 If you prefer testing locally on your IDE, run the application as a Spring app.
 
 ## Verify the API is running
-- Base URL: `http://localhost:8080`
+- Base URL: `http://localhost:8080/actuator/health`
 - H2 Console (optional): `http://localhost:8080/h2-console`
 
 ---
